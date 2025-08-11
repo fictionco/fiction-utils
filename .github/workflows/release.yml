@@ -1,0 +1,86 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Publish to NPM
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Get package info
+        id: package
+        run: |
+          echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Notify Discord - Success
+        if: success()
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: |
+            🚀 **Release Successful!**
+            
+            📦 **Package:** `${{ steps.package.outputs.name }}@${{ steps.package.outputs.version }}`
+            🔖 **Tag:** `${{ github.ref_name }}`
+            📋 **Commit:** `${{ github.sha }}`
+            👤 **Author:** ${{ github.actor }}
+            
+            ✅ Tests passed
+            ✅ Build completed
+            ✅ Published to NPM
+            
+            🔗 [View Release](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }})
+            📄 [NPM Package](https://www.npmjs.com/package/${{ steps.package.outputs.name }})
+
+      - name: Notify Discord - Failure
+        if: failure()
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: |
+            ❌ **Release Failed!**
+            
+            📦 **Package:** `${{ steps.package.outputs.name || 'Unknown' }}`
+            🔖 **Tag:** `${{ github.ref_name }}`
+            📋 **Commit:** `${{ github.sha }}`
+            👤 **Author:** ${{ github.actor }}
+            
+            💥 Something went wrong during the release process.
+            
+            🔗 [View Workflow Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})

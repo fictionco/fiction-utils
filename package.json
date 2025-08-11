@@ -1,0 +1,93 @@
+{
+  "name": "@fiction/utils",
+  "version": "0.0.1",
+  "description": "A collection of well-tested TypeScript utility functions",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./async": {
+      "types": "./dist/async.d.ts",
+      "import": "./dist/async.js",
+      "require": "./dist/async.cjs"
+    },
+    "./browser": {
+      "types": "./dist/browser.d.ts",
+      "import": "./dist/browser.js",
+      "require": "./dist/browser.cjs"
+    },
+    "./casing": {
+      "types": "./dist/casing.d.ts",
+      "import": "./dist/casing.js",
+      "require": "./dist/casing.cjs"
+    },
+    "./id": {
+      "types": "./dist/id.d.ts",
+      "import": "./dist/id.js",
+      "require": "./dist/id.cjs"
+    },
+    "./template": {
+      "types": "./dist/template.d.ts",
+      "import": "./dist/template.js",
+      "require": "./dist/template.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build && pnpm run test && pnpm run lint && pnpm run typecheck",
+    "release": "bumpp && pnpm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/fiction-utils.git"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "utils",
+    "helpers",
+    "functions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/fiction-utils/issues"
+  },
+  "homepage": "https://github.com/yourusername/fiction-utils#readme",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.0.0",
+    "@types/node": "^22.5.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "@vitest/ui": "^2.1.0",
+    "bumpp": "^9.5.0",
+    "dotenv": "^16.4.0",
+    "eslint": "^9.9.0",
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.0",
+    "vitest": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

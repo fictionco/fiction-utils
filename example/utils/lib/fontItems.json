@@ -1,0 +1,3881 @@
+[
+  {
+    "family": "Poppins",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "DM Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Plus Jakarta Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Space Grotesk",
+    "category": "sans-serif",
+    "tags": [
+      "grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Bebas Neue",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Syne",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Inter",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Oswald",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Work Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Roboto",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "300",
+      "400",
+      "500",
+      "700",
+      "900"
+    ],
+    "popularity": 10,
+    "reason": "popular"
+  },
+  {
+    "family": "Open Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 11,
+    "reason": "popular"
+  },
+  {
+    "family": "Montserrat",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 12,
+    "reason": "popular"
+  },
+  {
+    "family": "Lato",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "300",
+      "400",
+      "700",
+      "900"
+    ],
+    "popularity": 13,
+    "reason": "popular"
+  },
+  {
+    "family": "Roboto Condensed",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 14,
+    "reason": "popular"
+  },
+  {
+    "family": "Noto Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 15,
+    "reason": "popular"
+  },
+  {
+    "family": "Raleway",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 16,
+    "reason": "popular"
+  },
+  {
+    "family": "Nunito Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 17,
+    "reason": "popular"
+  },
+  {
+    "family": "Nunito",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 18,
+    "reason": "popular"
+  },
+  {
+    "family": "Ubuntu",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "700"
+    ],
+    "popularity": 19,
+    "reason": "popular"
+  },
+  {
+    "family": "Rubik",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 20,
+    "reason": "popular"
+  },
+  {
+    "family": "Kanit",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 21,
+    "reason": "popular"
+  },
+  {
+    "family": "PT Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 22,
+    "reason": "popular"
+  },
+  {
+    "family": "Mulish",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 23,
+    "reason": "popular"
+  },
+  {
+    "family": "Quicksand",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 24,
+    "reason": "popular"
+  },
+  {
+    "family": "Fira Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 25,
+    "reason": "popular"
+  },
+  {
+    "family": "Manrope",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 26,
+    "reason": "popular"
+  },
+  {
+    "family": "Barlow",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 27,
+    "reason": "popular"
+  },
+  {
+    "family": "IBM Plex Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 28,
+    "reason": "popular"
+  },
+  {
+    "family": "Heebo",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 29,
+    "reason": "popular"
+  },
+  {
+    "family": "Karla",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 30,
+    "reason": "popular"
+  },
+  {
+    "family": "Titillium Web",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "600",
+      "700",
+      "900"
+    ],
+    "popularity": 31,
+    "reason": "popular"
+  },
+  {
+    "family": "Outfit",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 32,
+    "reason": "popular"
+  },
+  {
+    "family": "Nanum Gothic",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400",
+      "700",
+      "800"
+    ],
+    "popularity": 33,
+    "reason": "popular"
+  },
+  {
+    "family": "Schibsted Grotesk",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 34,
+    "reason": "popular"
+  },
+  {
+    "family": "Parkinsans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 35,
+    "reason": "trending"
+  },
+  {
+    "family": "Jaro",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 36,
+    "reason": "trending"
+  },
+  {
+    "family": "SUSE",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 37,
+    "reason": "trending"
+  },
+  {
+    "family": "Ojuju",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 38,
+    "reason": "trending"
+  },
+  {
+    "family": "Roboto Flex",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 39,
+    "reason": "trending"
+  },
+  {
+    "family": "Mohave",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 40,
+    "reason": "trending"
+  },
+  {
+    "family": "Sofia Sans Semi Condensed",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 41,
+    "reason": "trending"
+  },
+  {
+    "family": "Imprima",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 42,
+    "reason": "trending"
+  },
+  {
+    "family": "Cantora One",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 43,
+    "reason": "trending"
+  },
+  {
+    "family": "Agdasima",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 44,
+    "reason": "trending"
+  },
+  {
+    "family": "Belanosima",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400",
+      "600",
+      "700"
+    ],
+    "popularity": 45,
+    "reason": "trending"
+  },
+  {
+    "family": "Funnel Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 46,
+    "reason": "trending"
+  },
+  {
+    "family": "Yaldevi",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 47,
+    "reason": "trending"
+  },
+  {
+    "family": "Ubuntu Sans",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 48,
+    "reason": "trending"
+  },
+  {
+    "family": "Actor",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 49,
+    "reason": "trending"
+  },
+  {
+    "family": "Antonio",
+    "category": "sans-serif",
+    "tags": [
+      "neo-grotesque",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 50,
+    "reason": "trending"
+  },
+  {
+    "family": "Fraunces",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Playfair Display",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Cormorant",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Spectral",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Libre Baskerville",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Lora",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Roboto Slab",
+    "category": "serif",
+    "tags": [
+      "slab-serif",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 7,
+    "reason": "popular"
+  },
+  {
+    "family": "Merriweather",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "700",
+      "900"
+    ],
+    "popularity": 8,
+    "reason": "popular"
+  },
+  {
+    "family": "PT Serif",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 9,
+    "reason": "popular"
+  },
+  {
+    "family": "Noto Serif",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 10,
+    "reason": "popular"
+  },
+  {
+    "family": "Bitter",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 11,
+    "reason": "popular"
+  },
+  {
+    "family": "EB Garamond",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 12,
+    "reason": "popular"
+  },
+  {
+    "family": "Crimson Text",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "600",
+      "700"
+    ],
+    "popularity": 13,
+    "reason": "popular"
+  },
+  {
+    "family": "Arvo",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 14,
+    "reason": "popular"
+  },
+  {
+    "family": "Cormorant Garamond",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 15,
+    "reason": "popular"
+  },
+  {
+    "family": "Slabo 27px",
+    "category": "serif",
+    "tags": [
+      "slab-serif"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 16,
+    "reason": "popular"
+  },
+  {
+    "family": "Zilla Slab",
+    "category": "serif",
+    "tags": [
+      "slab-serif",
+      "elegant",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 17,
+    "reason": "popular"
+  },
+  {
+    "family": "DM Serif Display",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 18,
+    "reason": "popular"
+  },
+  {
+    "family": "Nanum Myeongjo",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400",
+      "700",
+      "800"
+    ],
+    "popularity": 19,
+    "reason": "popular"
+  },
+  {
+    "family": "IBM Plex Serif",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 20,
+    "reason": "popular"
+  },
+  {
+    "family": "Crimson Pro",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 21,
+    "reason": "popular"
+  },
+  {
+    "family": "Frank Ruhl Libre",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 22,
+    "reason": "popular"
+  },
+  {
+    "family": "Domine",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 23,
+    "reason": "popular"
+  },
+  {
+    "family": "Cinzel",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 24,
+    "reason": "popular"
+  },
+  {
+    "family": "Vollkorn",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 25,
+    "reason": "popular"
+  },
+  {
+    "family": "Source Serif 4",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 26,
+    "reason": "popular"
+  },
+  {
+    "family": "Marcellus",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 27,
+    "reason": "popular"
+  },
+  {
+    "family": "Alegreya",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 28,
+    "reason": "popular"
+  },
+  {
+    "family": "Bree Serif",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 29,
+    "reason": "popular"
+  },
+  {
+    "family": "Tinos",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 30,
+    "reason": "popular"
+  },
+  {
+    "family": "Crete Round",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 31,
+    "reason": "popular"
+  },
+  {
+    "family": "Bodoni Moda",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 32,
+    "reason": "popular"
+  },
+  {
+    "family": "Prata",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 33,
+    "reason": "popular"
+  },
+  {
+    "family": "Cormorant Unicase",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 34,
+    "reason": "trending"
+  },
+  {
+    "family": "Oranienbaum",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 35,
+    "reason": "trending"
+  },
+  {
+    "family": "Caladea",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant",
+      "business",
+      "modern"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 36,
+    "reason": "trending"
+  },
+  {
+    "family": "Poltawski Nowy",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 37,
+    "reason": "trending"
+  },
+  {
+    "family": "Esteban",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 38,
+    "reason": "trending"
+  },
+  {
+    "family": "Imbue",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 39,
+    "reason": "trending"
+  },
+  {
+    "family": "Maname",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 40,
+    "reason": "trending"
+  },
+  {
+    "family": "Kalnia",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 41,
+    "reason": "trending"
+  },
+  {
+    "family": "Playfair",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 42,
+    "reason": "trending"
+  },
+  {
+    "family": "Zilla Slab Highlight",
+    "category": "serif",
+    "tags": [
+      "slab-serif"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 43,
+    "reason": "trending"
+  },
+  {
+    "family": "Libre Bodoni",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 44,
+    "reason": "trending"
+  },
+  {
+    "family": "Poly",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 45,
+    "reason": "trending"
+  },
+  {
+    "family": "Alike",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 46,
+    "reason": "trending"
+  },
+  {
+    "family": "Cormorant Infant",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 47,
+    "reason": "trending"
+  },
+  {
+    "family": "Aref Ruqaa Ink",
+    "category": "serif",
+    "tags": [
+      "transitional"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 48,
+    "reason": "trending"
+  },
+  {
+    "family": "Labrada",
+    "category": "serif",
+    "tags": [
+      "modern",
+      "elegant",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 49,
+    "reason": "trending"
+  },
+  {
+    "family": "Bona Nova",
+    "category": "serif",
+    "tags": [
+      "transitional",
+      "elegant"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 50,
+    "reason": "trending"
+  },
+  {
+    "family": "Comfortaa",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "popular"
+  },
+  {
+    "family": "Lilita One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 2,
+    "reason": "popular"
+  },
+  {
+    "family": "Abril Fatface",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 3,
+    "reason": "popular"
+  },
+  {
+    "family": "Rowdies",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "700"
+    ],
+    "popularity": 4,
+    "reason": "popular"
+  },
+  {
+    "family": "Passion One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400",
+      "700",
+      "900"
+    ],
+    "popularity": 5,
+    "reason": "popular"
+  },
+  {
+    "family": "Spicy Rice",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 6,
+    "reason": "popular"
+  },
+  {
+    "family": "Oleo Script",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 7,
+    "reason": "popular"
+  },
+  {
+    "family": "Concert One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 8,
+    "reason": "popular"
+  },
+  {
+    "family": "Bowlby One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 9,
+    "reason": "popular"
+  },
+  {
+    "family": "Righteous",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 10,
+    "reason": "popular"
+  },
+  {
+    "family": "Squada One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 11,
+    "reason": "popular"
+  },
+  {
+    "family": "Pirata One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 12,
+    "reason": "popular"
+  },
+  {
+    "family": "Alfa Slab One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 13,
+    "reason": "popular"
+  },
+  {
+    "family": "Bangers",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 14,
+    "reason": "popular"
+  },
+  {
+    "family": "Patua One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 15,
+    "reason": "popular"
+  },
+  {
+    "family": "Baloo Paaji 2",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 16,
+    "reason": "popular"
+  },
+  {
+    "family": "Oxanium",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 17,
+    "reason": "popular"
+  },
+  {
+    "family": "Yatra One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 18,
+    "reason": "popular"
+  },
+  {
+    "family": "Titan One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 19,
+    "reason": "popular"
+  },
+  {
+    "family": "Creepster",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 20,
+    "reason": "popular"
+  },
+  {
+    "family": "Luckiest Guy",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 21,
+    "reason": "popular"
+  },
+  {
+    "family": "Silkscreen",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 22,
+    "reason": "popular"
+  },
+  {
+    "family": "Poiret One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 23,
+    "reason": "popular"
+  },
+  {
+    "family": "Dela Gothic One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 24,
+    "reason": "popular"
+  },
+  {
+    "family": "Yeseva One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 25,
+    "reason": "popular"
+  },
+  {
+    "family": "Baloo Bhaijaan 2",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 26,
+    "reason": "popular"
+  },
+  {
+    "family": "Special Elite",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 27,
+    "reason": "popular"
+  },
+  {
+    "family": "Rubik Bubbles",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 28,
+    "reason": "popular"
+  },
+  {
+    "family": "Fugaz One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 29,
+    "reason": "popular"
+  },
+  {
+    "family": "Libre Barcode 39",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 30,
+    "reason": "popular"
+  },
+  {
+    "family": "Ponnala",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 31,
+    "reason": "trending"
+  },
+  {
+    "family": "Protest Revolution",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 32,
+    "reason": "trending"
+  },
+  {
+    "family": "Bokor",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 33,
+    "reason": "trending"
+  },
+  {
+    "family": "Potta One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 34,
+    "reason": "trending"
+  },
+  {
+    "family": "Nabla",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 35,
+    "reason": "trending"
+  },
+  {
+    "family": "Jacquard 12 Charted",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 36,
+    "reason": "trending"
+  },
+  {
+    "family": "Ga Maamli",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 37,
+    "reason": "trending"
+  },
+  {
+    "family": "Lacquer",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 38,
+    "reason": "trending"
+  },
+  {
+    "family": "Sarina",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 39,
+    "reason": "trending"
+  },
+  {
+    "family": "Chango",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 40,
+    "reason": "trending"
+  },
+  {
+    "family": "Bungee Spice",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 41,
+    "reason": "trending"
+  },
+  {
+    "family": "Rubik Puddles",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 42,
+    "reason": "trending"
+  },
+  {
+    "family": "Kenia",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 43,
+    "reason": "trending"
+  },
+  {
+    "family": "Faster One",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 44,
+    "reason": "trending"
+  },
+  {
+    "family": "Raleway Dots",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 45,
+    "reason": "trending"
+  },
+  {
+    "family": "Jersey 20",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 46,
+    "reason": "trending"
+  },
+  {
+    "family": "Honk",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 47,
+    "reason": "trending"
+  },
+  {
+    "family": "Modak",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 48,
+    "reason": "trending"
+  },
+  {
+    "family": "Jersey 25",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 49,
+    "reason": "trending"
+  },
+  {
+    "family": "Freeman",
+    "category": "display",
+    "tags": [
+      "creative"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 50,
+    "reason": "trending"
+  },
+  {
+    "family": "Fira Code",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Material Icons",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 2,
+    "reason": "popular"
+  },
+  {
+    "family": "Roboto Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 3,
+    "reason": "popular"
+  },
+  {
+    "family": "Inconsolata",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 4,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Symbols Outlined",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 5,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Icons Outlined",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 6,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Symbols Rounded",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 7,
+    "reason": "popular"
+  },
+  {
+    "family": "Source Code Pro",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 8,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Icons Round",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 9,
+    "reason": "popular"
+  },
+  {
+    "family": "IBM Plex Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 10,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Icons Sharp",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 11,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Icons Two Tone",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 12,
+    "reason": "popular"
+  },
+  {
+    "family": "Space Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 13,
+    "reason": "popular"
+  },
+  {
+    "family": "Courier Prime",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 14,
+    "reason": "popular"
+  },
+  {
+    "family": "JetBrains Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 15,
+    "reason": "popular"
+  },
+  {
+    "family": "Ubuntu Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 16,
+    "reason": "popular"
+  },
+  {
+    "family": "PT Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 17,
+    "reason": "popular"
+  },
+  {
+    "family": "Material Symbols Sharp",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 18,
+    "reason": "popular"
+  },
+  {
+    "family": "DM Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500"
+    ],
+    "popularity": 19,
+    "reason": "popular"
+  },
+  {
+    "family": "VT323",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 20,
+    "reason": "popular"
+  },
+  {
+    "family": "Cousine",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 21,
+    "reason": "popular"
+  },
+  {
+    "family": "Anonymous Pro",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 22,
+    "reason": "popular"
+  },
+  {
+    "family": "Fira Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "700"
+    ],
+    "popularity": 23,
+    "reason": "popular"
+  },
+  {
+    "family": "Share Tech Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 24,
+    "reason": "popular"
+  },
+  {
+    "family": "Cutive Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 25,
+    "reason": "popular"
+  },
+  {
+    "family": "Overpass Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 26,
+    "reason": "popular"
+  },
+  {
+    "family": "Oxygen Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 27,
+    "reason": "popular"
+  },
+  {
+    "family": "Reddit Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 28,
+    "reason": "popular"
+  },
+  {
+    "family": "Azeret Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 29,
+    "reason": "popular"
+  },
+  {
+    "family": "B612 Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 30,
+    "reason": "popular"
+  },
+  {
+    "family": "Martian Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "popularity": 31,
+    "reason": "popular"
+  },
+  {
+    "family": "Sixtyfour Convergence",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 32,
+    "reason": "trending"
+  },
+  {
+    "family": "Sixtyfour",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 33,
+    "reason": "trending"
+  },
+  {
+    "family": "Syne Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 34,
+    "reason": "trending"
+  },
+  {
+    "family": "Red Hat Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 35,
+    "reason": "trending"
+  },
+  {
+    "family": "Major Mono Display",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 36,
+    "reason": "trending"
+  },
+  {
+    "family": "Victor Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 37,
+    "reason": "trending"
+  },
+  {
+    "family": "Fragment Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 38,
+    "reason": "trending"
+  },
+  {
+    "family": "Nova Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 39,
+    "reason": "trending"
+  },
+  {
+    "family": "Geist Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 40,
+    "reason": "trending"
+  },
+  {
+    "family": "M PLUS 1 Code",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 41,
+    "reason": "trending"
+  },
+  {
+    "family": "Ubuntu Sans Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 42,
+    "reason": "trending"
+  },
+  {
+    "family": "Monofett",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 43,
+    "reason": "trending"
+  },
+  {
+    "family": "Chivo Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 44,
+    "reason": "trending"
+  },
+  {
+    "family": "Lekton",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 45,
+    "reason": "trending"
+  },
+  {
+    "family": "Sometype Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 46,
+    "reason": "trending"
+  },
+  {
+    "family": "Xanh Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 47,
+    "reason": "trending"
+  },
+  {
+    "family": "Workbench",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 48,
+    "reason": "trending"
+  },
+  {
+    "family": "Kode Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 49,
+    "reason": "trending"
+  },
+  {
+    "family": "Spline Sans Mono",
+    "category": "monospace",
+    "tags": [
+      "technical",
+      "business"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 50,
+    "reason": "trending"
+  },
+  {
+    "family": "Caveat",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Architects Daughter",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Gochi Hand",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 1,
+    "reason": "recommended"
+  },
+  {
+    "family": "Dancing Script",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 4,
+    "reason": "popular"
+  },
+  {
+    "family": "Nanum Gothic Coding",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 5,
+    "reason": "popular"
+  },
+  {
+    "family": "Pacifico",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 6,
+    "reason": "popular"
+  },
+  {
+    "family": "Shadows Into Light",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 7,
+    "reason": "popular"
+  },
+  {
+    "family": "Satisfy",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 8,
+    "reason": "popular"
+  },
+  {
+    "family": "Permanent Marker",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 9,
+    "reason": "popular"
+  },
+  {
+    "family": "Indie Flower",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 10,
+    "reason": "popular"
+  },
+  {
+    "family": "Great Vibes",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 11,
+    "reason": "popular"
+  },
+  {
+    "family": "Merienda",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "popularity": 12,
+    "reason": "popular"
+  },
+  {
+    "family": "Kalam",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "700"
+    ],
+    "popularity": 13,
+    "reason": "popular"
+  },
+  {
+    "family": "Courgette",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 14,
+    "reason": "popular"
+  },
+  {
+    "family": "Gloria Hallelujah",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 15,
+    "reason": "popular"
+  },
+  {
+    "family": "Yellowtail",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 16,
+    "reason": "popular"
+  },
+  {
+    "family": "Kaushan Script",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 17,
+    "reason": "popular"
+  },
+  {
+    "family": "Sacramento",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 18,
+    "reason": "popular"
+  },
+  {
+    "family": "Neucha",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 19,
+    "reason": "popular"
+  },
+  {
+    "family": "Zeyada",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 20,
+    "reason": "popular"
+  },
+  {
+    "family": "Allura",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 21,
+    "reason": "popular"
+  },
+  {
+    "family": "Sofia",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 22,
+    "reason": "popular"
+  },
+  {
+    "family": "Tangerine",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "700"
+    ],
+    "popularity": 23,
+    "reason": "popular"
+  },
+  {
+    "family": "Patrick Hand",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 24,
+    "reason": "popular"
+  },
+  {
+    "family": "Cookie",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 25,
+    "reason": "popular"
+  },
+  {
+    "family": "Parisienne",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 26,
+    "reason": "popular"
+  },
+  {
+    "family": "Comic Neue",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "300",
+      "400",
+      "700"
+    ],
+    "popularity": 27,
+    "reason": "popular"
+  },
+  {
+    "family": "Handlee",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 28,
+    "reason": "popular"
+  },
+  {
+    "family": "Itim",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 29,
+    "reason": "popular"
+  },
+  {
+    "family": "Alex Brush",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 30,
+    "reason": "popular"
+  },
+  {
+    "family": "Homemade Apple",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 31,
+    "reason": "popular"
+  },
+  {
+    "family": "Bad Script",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 32,
+    "reason": "popular"
+  },
+  {
+    "family": "Edu AU VIC WA NT Arrows",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 33,
+    "reason": "trending"
+  },
+  {
+    "family": "Playwrite HR Lijeva",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "popularity": 34,
+    "reason": "trending"
+  },
+  {
+    "family": "Hachi Maru Pop",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 35,
+    "reason": "trending"
+  },
+  {
+    "family": "Edu AU VIC WA NT Hand",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400",
+      "500",
+      "600",
+      "700"
+    ],
+    "popularity": 36,
+    "reason": "trending"
+  },
+  {
+    "family": "Whisper",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 37,
+    "reason": "trending"
+  },
+  {
+    "family": "Caramel",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 38,
+    "reason": "trending"
+  },
+  {
+    "family": "Playwrite IT Moderna",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "popularity": 39,
+    "reason": "trending"
+  },
+  {
+    "family": "Quintessential",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 40,
+    "reason": "trending"
+  },
+  {
+    "family": "Grey Qo",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 41,
+    "reason": "trending"
+  },
+  {
+    "family": "Lakki Reddy",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 42,
+    "reason": "trending"
+  },
+  {
+    "family": "Dr Sugiyama",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 43,
+    "reason": "trending"
+  },
+  {
+    "family": "Comforter Brush",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 44,
+    "reason": "trending"
+  },
+  {
+    "family": "Beth Ellen",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 45,
+    "reason": "trending"
+  },
+  {
+    "family": "Playwrite NZ",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "popularity": 46,
+    "reason": "trending"
+  },
+  {
+    "family": "Hi Melody",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 47,
+    "reason": "trending"
+  },
+  {
+    "family": "Playwrite CU",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "400"
+    ],
+    "popularity": 48,
+    "reason": "trending"
+  },
+  {
+    "family": "Nanum Brush Script",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 49,
+    "reason": "trending"
+  },
+  {
+    "family": "Bonbon",
+    "category": "handwriting",
+    "tags": [
+      "creative",
+      "casual"
+    ],
+    "variants": [
+      "400"
+    ],
+    "popularity": 50,
+    "reason": "trending"
+  }
+]
