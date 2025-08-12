@@ -14,25 +14,15 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: {
-        index: resolve(__dirname, 'src/index.ts'),
-        async: resolve(__dirname, 'src/async.ts'),
-        browser: resolve(__dirname, 'src/browser.ts'),
-        casing: resolve(__dirname, 'src/casing.ts'),
-        id: resolve(__dirname, 'src/id.ts'),
-        template: resolve(__dirname, 'src/template.ts'),
-      },
-      formats: ['es', 'cjs'],
-      fileName: (format, entryName) => {
-        const extension = format === 'es' ? 'js' : 'cjs'
-        return `${entryName}.${extension}`
-      },
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'FictionUtils',
+      formats: ['es'],
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['node:path', 'node:fs', 'node:crypto', 'node:url'],
       output: {
         preserveModules: false,
-        exports: 'named',
       },
     },
     sourcemap: true,

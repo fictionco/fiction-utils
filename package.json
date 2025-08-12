@@ -9,33 +9,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./async": {
-      "types": "./dist/async.d.ts",
-      "import": "./dist/async.js",
-      "require": "./dist/async.cjs"
-    },
-    "./browser": {
-      "types": "./dist/browser.d.ts",
-      "import": "./dist/browser.js",
-      "require": "./dist/browser.cjs"
-    },
-    "./casing": {
-      "types": "./dist/casing.d.ts",
-      "import": "./dist/casing.js",
-      "require": "./dist/casing.cjs"
-    },
-    "./id": {
-      "types": "./dist/id.d.ts",
-      "import": "./dist/id.js",
-      "require": "./dist/id.cjs"
-    },
-    "./template": {
-      "types": "./dist/template.d.ts",
-      "import": "./dist/template.js",
-      "require": "./dist/template.cjs"
+      "import": "./dist/index.js"
     }
   },
   "files": [
@@ -47,10 +21,11 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
+    "test:post-build": "vitest run test/post-build.test.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build && pnpm run test && pnpm run lint && pnpm run typecheck",
+    "prepublishOnly": "pnpm run build && pnpm run test && pnpm run test:post-build && pnpm run lint && pnpm run typecheck",
     "release": "bumpp && pnpm publish"
   },
   "repository": {
@@ -89,5 +64,10 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@types/spark-md5": "^3.0.5",
+    "fast-safe-stringify": "^2.1.1",
+    "spark-md5": "^3.0.2"
   }
 }
