@@ -214,11 +214,24 @@ pnpm typecheck
 
 ## Publishing
 
-This package uses automated publishing via GitHub Actions. To publish:
+This package uses automated publishing via GitHub Actions with two workflows:
 
-1. Update version in `package.json`
-2. Create and push a git tag: `git tag v1.0.0 && git push origin v1.0.0`
-3. GitHub Actions will automatically build and publish to NPM
+### Automatic Patch Releases (Continuous Deployment)
+- **Trigger:** Every push to `main` branch
+- **Process:** CI runs → Tests pass → Version bumped (patch) → Published to NPM
+- **Use case:** Bug fixes, documentation updates, minor improvements
+
+### Manual Releases (Minor/Major versions)
+- **Trigger:** Manual workflow dispatch in GitHub Actions
+- **Process:** Choose version bump type (patch/minor/major) → Tests pass → Version bumped → Tagged → Published to NPM  
+- **Use case:** New features (minor), breaking changes (major)
+
+### Running Manual Release
+1. Go to Actions tab in GitHub
+2. Select "Manual Release" workflow
+3. Click "Run workflow"
+4. Choose version bump type (patch/minor/major)
+5. GitHub Actions will handle the rest
 
 ### Setup GitHub Secrets
 

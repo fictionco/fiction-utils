@@ -9,9 +9,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -23,6 +29,7 @@ jobs:
         with:
           node-version: 'lts/*'
           cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: pnpm install
@@ -42,16 +49,97 @@ jobs:
       - name: Run post-build tests
         run: pnpm run test:post-build
 
-      - name: Notify Discord - CI Success
-        if: success() && github.ref == 'refs/heads/main'
+      - name: Check if version bump is needed
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        id: version_check
+        run: |
+          # Skip if commit message contains [skip ci] or is already a version bump
+          if [[ "${{ github.event.head_commit.message }}" == *"[skip ci]"* || "${{ github.event.head_commit.message }}" == *"chore: bump version"* ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping version bump - commit is automated or contains [skip ci]"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Bump version and publish
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && steps.version_check.outputs.skip != 'true'
+        run: |
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Fetch latest changes to avoid conflicts
+          git fetch origin main
+
+          # Bump version
+          pnpm version patch --no-git-tag-version
+
+          # Commit and push version bump
+          git add package.json
+          git commit -m "chore: bump version [skip ci]"
+          git push origin main
+
+          # Publish to NPM
+          pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Get package info
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && steps.version_check.outputs.skip != 'true'
+        id: package
+        run: |
+          echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Notify Discord - CI Success (Published)
+        if: success() && github.ref == 'refs/heads/main' && github.event_name == 'push' && steps.version_check.outputs.skip != 'true'
         uses: tsickert/discord-webhook@v6.0.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
-            ✅ **CI Build Successful**
+            🚀 **CI Build & Publish Successful**
+
+            📦 **Package:** `${{ steps.package.outputs.name }}@${{ steps.package.outputs.version }}`
+            🌿 **Branch:** `${{ github.ref_name }}`
+            📋 **Commit:** `${{ github.event.head_commit.message }}`
+            👤 **Author:** ${{ github.actor }}
+            🧪 **Node.js:** LTS
+
+            ✅ All tests passed
+            ✅ Build completed
+            ✅ Published to NPM
+
+            🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            📄 [NPM Package](https://www.npmjs.com/package/${{ steps.package.outputs.name }})
+
+      - name: Notify Discord - CI Success (No Publish)
+        if: success() && github.ref == 'refs/heads/main' && github.event_name == 'push' && steps.version_check.outputs.skip == 'true'
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: |
+            ✅ **CI Build Successful (No Publish)**
 
             🌿 **Branch:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.event.head_commit.message }}`
+            👤 **Author:** ${{ github.actor }}
+            🧪 **Node.js:** LTS
+
+            ⏭️ Skipped publishing (automated commit or [skip ci])
+
+            🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+      - name: Notify Discord - CI Success (PR)
+        if: success() && github.event_name == 'pull_request'
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          content: |
+            ✅ **PR CI Build Successful**
+
+            🔀 **PR:** #${{ github.event.number }} - ${{ github.event.pull_request.title }}
+            🌿 **Branch:** `${{ github.head_ref }}`
             👤 **Author:** ${{ github.actor }}
             🧪 **Node.js:** LTS
 
@@ -65,13 +153,13 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
-            ❌ **CI Build Failed**
+            ❌ **CI Build/Publish Failed**
 
             🌿 **Branch:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.event.head_commit.message }}`
             👤 **Author:** ${{ github.actor }}
             🧪 **Node.js:** LTS
 
-            💥 Build or tests failed on main branch!
+            💥 Build, tests, or publish failed on main branch!
 
             🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})

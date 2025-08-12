@@ -45,8 +45,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build && pnpm run test && pnpm run test:post-build && pnpm run lint && pnpm run typecheck",
-    "release": "bumpp && pnpm publish"
+    "prepublishOnly": "pnpm run build && pnpm run test && pnpm run test:post-build && pnpm run lint && pnpm run typecheck"
   },
   "dependencies": {
     "@types/spark-md5": "^3.0.5",
