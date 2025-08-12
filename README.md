@@ -190,6 +190,58 @@ isNumeric('123') // true
 isNumeric('abc') // false
 ```
 
+### Object Utilities
+
+```typescript
+import { 
+  omit, 
+  removeUndefined, 
+  isPlainObject,
+  parseObject,
+  setNested,
+  getNested,
+  findValueByKey,
+  deepMerge,
+  deepMergeAll,
+  getDotpathArrayIndices
+} from '@fiction/utils'
+
+// Remove specific keys from objects
+const obj = { a: 1, b: 2, c: 3 }
+omit(obj, 'a', 'b') // { c: 3 }
+
+// Clean undefined/null values
+removeUndefined({ a: 1, b: undefined, c: null }) // { a: 1, c: null }
+removeUndefined({ a: 1, b: undefined, c: null }, { removeNull: true }) // { a: 1 }
+
+// Check for plain objects (not arrays, dates, etc.)
+isPlainObject({}) // true
+isPlainObject([]) // false
+isPlainObject(new Date()) // false
+
+// Transform object values recursively
+parseObject({
+  obj: { a: 1, b: { c: 2 } },
+  onValue: ({ value }) => typeof value === 'number' ? value * 2 : value
+}) // { a: 2, b: { c: 4 } }
+
+// Set/get nested properties with dot notation
+const data = { user: { name: 'John' } }
+setNested({ data, path: 'user.age', value: 30 }) // { user: { name: 'John', age: 30 } }
+getNested({ data, path: 'user.name' }) // 'John'
+
+// Find values by key recursively
+findValueByKey({ a: { b: { target: 'found' } } }, 'target') // 'found'
+
+// Deep merge objects
+deepMerge([{ a: 1 }, { b: 2 }, { a: 3 }]) // { a: 3, b: 2 }
+deepMergeAll([{ items: [1] }, { items: [2] }]) // { items: [1, 2] }
+
+// Extract array indices from dot paths
+getDotpathArrayIndices('items.0.title') // [0]
+getDotpathArrayIndices('data.users.2.profile.1') // [2, 1]
+```
+
 ## Development
 
 ```bash
