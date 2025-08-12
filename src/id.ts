@@ -6,7 +6,7 @@
 export function objectId({ prefix = 'id_' } = {}): string {
   const effectivePrefix = prefix.length >= 3 ? prefix.substring(0, 3) : prefix.padEnd(3, '_')
   const timestamp = Math.floor(Date.now() / 1000).toString(16).padStart(8, '0')
-  
+
   let randomPart = ''
   for (let i = 0; i < 16; i++)
     randomPart += Math.floor(Math.random() * 16).toString(16)
@@ -42,6 +42,6 @@ export function shortId(args: { len?: number, withNumbers?: boolean, prefix?: st
     const randomIndex = Math.floor(Math.random() * characters.length)
     result += characters[randomIndex]
   }
-  
+
   return prefix + result
 }

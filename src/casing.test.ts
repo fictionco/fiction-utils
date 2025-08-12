@@ -192,7 +192,7 @@ describe('toSlug', () => {
 describe('toLabel', () => {
   it('should return an empty string for null or undefined inputs', () => {
     expect(toLabel()).toBe('')
-    expect(toLabel(null as any)).toBe('')
+    expect(toLabel(null as unknown as string)).toBe('')
   })
 
   it('should handle numbers and convert them to strings', () => {
@@ -219,8 +219,8 @@ describe('capitalize', () => {
   })
 
   it('should return an empty string if input is not a string', () => {
-    expect(capitalize(null as any)).toBe('')
-    expect(capitalize(undefined as any)).toBe('')
+    expect(capitalize(null as unknown as string)).toBe('')
+    expect(capitalize(undefined as unknown as string)).toBe('')
   })
 
   it('should handle empty string', () => {

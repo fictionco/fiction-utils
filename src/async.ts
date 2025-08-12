@@ -2,15 +2,15 @@
  * Wait for a specific amount of time
  */
 export async function waitFor(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms || 0))
+  return new Promise((resolve) => setTimeout(resolve, ms || 0))
 }
 
 /**
  * Throttle a function to run only every period
  */
-export function throttle<T extends (...args: any[]) => void>(
-  func: T, 
-  wait: number
+export function throttle<T extends (...args: unknown[]) => void>(
+  func: T,
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let lastTime = 0
   let timeout: NodeJS.Timeout | null = null
@@ -18,7 +18,7 @@ export function throttle<T extends (...args: any[]) => void>(
   return function (...args: Parameters<T>) {
     const now = Date.now()
     const remaining = wait - (now - lastTime)
-    
+
     if (remaining <= 0 || remaining > wait) {
       if (timeout) {
         clearTimeout(timeout)
@@ -26,8 +26,7 @@ export function throttle<T extends (...args: any[]) => void>(
       }
       lastTime = now
       func(...args)
-    }
-    else if (!timeout) {
+    } else if (!timeout) {
       timeout = setTimeout(() => {
         lastTime = Date.now()
         timeout = null
@@ -40,12 +39,12 @@ export function throttle<T extends (...args: any[]) => void>(
 /**
  * Debounce multiple sequential calls to a function into a single call
  */
-export function debounce<T extends (...args: any[]) => void>(
-  func: T, 
-  delay: number | (() => number)
+export function debounce<T extends (...args: unknown[]) => void>(
+  func: T,
+  delay: number | (() => number),
 ): (...args: Parameters<T>) => void {
   let timeoutId: NodeJS.Timeout | null = null
-  
+
   return (...args: Parameters<T>) => {
     if (timeoutId !== null)
       clearTimeout(timeoutId)

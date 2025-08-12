@@ -23,7 +23,7 @@ export function randomBetween(min: number, max: number, decimalPlaces = 0): numb
 /**
  * Check if a value is numeric or number-like
  */
-export function isNumeric(n: number | string | undefined): boolean {
+export function isNumeric(n: number | string | undefined | null): boolean {
   if (n === undefined || n === null)
     return false
   return !Number.isNaN(Number.parseFloat(n.toString())) && Number.isFinite(+n)
@@ -33,8 +33,8 @@ export function isNumeric(n: number | string | undefined): boolean {
  * Format large numbers with abbreviated suffixes (k, m, b, t)
  */
 export function numberFormatter(
-  num: number | string, 
-  { fractionDigits = 1, integerOnly = false }: NumberFormatterOptions = {}
+  num: number | string,
+  { fractionDigits = 1, integerOnly = false }: NumberFormatterOptions = {},
 ): string | number {
   const value = typeof num === 'string' ? Number.parseFloat(num) : num
   if (!Number.isFinite(value))
@@ -100,8 +100,7 @@ export function durationFormatter(duration: number | undefined, unit: 'ms' | 's'
       const v = `${seconds}s`
       out.push(v)
     }
-  }
-  else {
+  } else {
     const ms = msDuration - msMinutes - msHours
     if (ms >= 0) {
       const v = `${ms.toLocaleString()}ms`
@@ -130,9 +129,9 @@ export type NumberFormats = typeof numberFormats[number]
  * Comprehensive number formatter supporting various formats
  */
 export function formatNumber(
-  value: number | string | undefined, 
-  format?: NumberFormats, 
-  opts: { prefix?: string, suffix?: string } = {}
+  value: number | string | undefined,
+  format?: NumberFormats,
+  opts: { prefix?: string, suffix?: string } = {},
 ): string | number | undefined {
   const { prefix = '', suffix = '' } = opts
   let out: string | number | undefined = undefined
@@ -143,8 +142,7 @@ export function formatNumber(
   if (format === 'percent' || format === 'rawPercent') {
     value = format === 'rawPercent' ? value * 100 : value
     out = `${Math.round(value * 10) / 10}%`
-  }
-  else if (format === 'dollar') {
+  } else if (format === 'dollar') {
     out = value.toLocaleString('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -152,20 +150,15 @@ export function formatNumber(
       maximumFractionDigits: 0,
       useGrouping: true,
     })
-  }
-  else if (format === 'duration' || format === 'microDuration') {
+  } else if (format === 'duration' || format === 'microDuration') {
     out = durationFormatter(value, format === 'microDuration' ? 'ms' : 's')
-  }
-  else if (format === 'abbreviated') {
+  } else if (format === 'abbreviated') {
     out = numberFormatter(value)
-  }
-  else if (format === 'abbreviatedInteger') {
+  } else if (format === 'abbreviatedInteger') {
     out = numberFormatter(value, { integerOnly: true })
-  }
-  else if (format === 'abbreviatedDollar') {
+  } else if (format === 'abbreviatedDollar') {
     out = `$${numberFormatter(value)}`
-  }
-  else {
+  } else {
     out = value.toLocaleString()
   }
 

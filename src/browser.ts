@@ -20,7 +20,7 @@ export function getAnonymousId(config: AnonymousIdConfig = {}): AnonymousIdResul
   const {
     anonIdKey = 'FictionAnonId',
     firstSessionKey = 'FictionFirstSession',
-    cookieExpireDays = 365
+    cookieExpireDays = 365,
   } = config
 
   if (typeof window === 'undefined') {
@@ -37,7 +37,7 @@ export function getAnonymousId(config: AnonymousIdConfig = {}): AnonymousIdResul
     setCookie({
       name: anonIdKey,
       value: anonymousId,
-      days: cookieExpireDays
+      days: cookieExpireDays,
     })
     localStorage.setItem(anonIdKey, anonymousId)
     sessionStorage.setItem(firstSessionKey, 'yes')
@@ -50,18 +50,21 @@ export function getAnonymousId(config: AnonymousIdConfig = {}): AnonymousIdResul
  * Simple cookie getter
  */
 function getCookie(name: string): string | undefined {
-  if (typeof document === 'undefined') return undefined
-  
-  const nameEQ = name + '='
+  if (typeof document === 'undefined')
+    return undefined
+
+  const nameEQ = `${name}=`
   const ca = document.cookie.split(';')
-  
+
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i]
-    if (!c) continue
+    if (!c)
+      continue
     while (c.charAt(0) === ' ') c = c.substring(1, c.length)
-    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
+    if (c.indexOf(nameEQ) === 0)
+      return c.substring(nameEQ.length, c.length)
   }
-  
+
   return undefined
 }
 
@@ -70,15 +73,16 @@ function getCookie(name: string): string | undefined {
  */
 function setCookie(args: { name: string, value: string, days?: number }): void {
   const { name, value, days = 365 } = args
-  
-  if (typeof document === 'undefined') return
-  
+
+  if (typeof document === 'undefined')
+    return
+
   let expires = ''
   if (days) {
     const date = new Date()
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
-    expires = '; expires=' + date.toUTCString()
+    expires = `; expires=${date.toUTCString()}`
   }
-  
-  document.cookie = name + '=' + value + expires + '; path=/'
+
+  document.cookie = `${name}=${value}${expires}; path=/`
 }

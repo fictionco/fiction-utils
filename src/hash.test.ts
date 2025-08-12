@@ -10,7 +10,7 @@ describe('stringify', () => {
   })
 
   it('should handle circular references', () => {
-    const obj: any = { a: 1 }
+    const obj: Record<string, unknown> = { a: 1 }
     obj.circular = obj
     const result = stringify(obj)
     // fast-safe-stringify removes circular references rather than marking them

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { 
-  randomBetween, 
-  isNumeric, 
-  numberFormatter, 
-  durationFormatter, 
-  formatNumber, 
-  formatBytes 
+import {
+  durationFormatter,
+  formatBytes,
+  formatNumber,
+  isNumeric,
+  numberFormatter,
+  randomBetween,
 } from './number'
 
 describe('randomBetween', () => {
@@ -58,7 +58,7 @@ describe('isNumeric', () => {
     expect(isNumeric(' ')).toBe(false)
     expect(isNumeric(null)).toBe(false)
     expect(isNumeric(undefined)).toBe(false)
-    expect(isNumeric(NaN)).toBe(false)
+    expect(isNumeric(Number.NaN)).toBe(false)
     expect(isNumeric(Infinity)).toBe(false)
     expect(isNumeric(-Infinity)).toBe(false)
   })
@@ -67,7 +67,7 @@ describe('isNumeric', () => {
 describe('numberFormatter', () => {
   it('should return original value for non-numeric inputs', () => {
     expect(numberFormatter('abc')).toBe('abc')
-    expect(numberFormatter(NaN)).toBe(NaN)
+    expect(numberFormatter(Number.NaN)).toBe(Number.NaN)
     expect(numberFormatter(Infinity)).toBe(Infinity)
   })
 
@@ -174,7 +174,7 @@ describe('formatNumber', () => {
   it('should return original value for non-numeric inputs', () => {
     expect(formatNumber('abc')).toBe('abc')
     expect(formatNumber(undefined)).toBe(undefined)
-    expect(formatNumber(null as any)).toBe(null)
+    expect(formatNumber(null as unknown as number)).toBe(null)
   })
 
   it('should format as abbreviated', () => {

@@ -4,7 +4,7 @@ import md5 from 'spark-md5'
 /**
  * Type for hashable data
  */
-export type HashObject = Record<string, any> | any[] | string | number
+export type HashObject = Record<string, unknown> | unknown[] | string | number
 
 /**
  * Stringify data for consistent hashing
@@ -35,16 +35,19 @@ export function fastHash(data: HashObject): string {
 /**
  * Recursively sort object keys for consistent hashing
  */
-function sortObjectKeys(obj: any): any {
-  if (obj === null || obj === undefined) return obj
-  if (typeof obj !== 'object') return obj
-  if (Array.isArray(obj)) return obj.map(sortObjectKeys)
-  
-  const sorted: Record<string, any> = {}
+function sortObjectKeys(obj: unknown): unknown {
+  if (obj === null || obj === undefined)
+    return obj
+  if (typeof obj !== 'object')
+    return obj
+  if (Array.isArray(obj))
+    return obj.map(sortObjectKeys)
+
+  const sorted: Record<string, unknown> = {}
   Object.keys(obj)
     .sort()
     .forEach((key) => {
-      sorted[key] = sortObjectKeys(obj[key])
+      sorted[key] = sortObjectKeys((obj as Record<string, unknown>)[key])
     })
   return sorted
 }
@@ -52,6 +55,6 @@ function sortObjectKeys(obj: any): any {
 /**
  * Compare two objects by their hash for equality
  */
-export function hashEqual(a?: HashObject, b?: HashObject): boolean {
+export function hashEqual(a?: HashObject | null, b?: HashObject | null): boolean {
   return fastHash(a || {}) === fastHash(b || {})
 }

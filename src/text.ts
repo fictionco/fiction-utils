@@ -32,7 +32,7 @@ export function countWords(text: string): number {
   return strippedHtml
     .trim()
     .split(/\s+/)
-    .filter(word => word.length > 0)
+    .filter((word) => word.length > 0)
     .length
 }
 
@@ -40,8 +40,8 @@ export function countWords(text: string): number {
  * Recursively get word count from an object's text fields
  */
 export function getObjectWordCount(
-  obj: Record<string, any>, 
-  opts: { addFields?: string[], ignoreKeys?: string[] } = {}
+  obj: Record<string, unknown>,
+  opts: { addFields?: string[], ignoreKeys?: string[] } = {},
 ): number {
   if (!obj)
     return 0
@@ -61,13 +61,13 @@ export function getObjectWordCount(
     // Handle other arrays recursively
     if (Array.isArray(value)) {
       return count + value.reduce((sum, item) => {
-        return sum + (typeof item === 'object' ? getObjectWordCount(item, opts) : 0)
+        return sum + (typeof item === 'object' ? getObjectWordCount(item as Record<string, unknown>, opts) : 0)
       }, 0)
     }
 
     // Handle nested objects recursively
     if (value && typeof value === 'object') {
-      return count + getObjectWordCount(value, opts)
+      return count + getObjectWordCount(value as Record<string, unknown>, opts)
     }
 
     // Count words if field name matches and value is string

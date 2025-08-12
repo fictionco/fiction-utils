@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
-          cache: 'pnpm'
+          cache: pnpm
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
@@ -35,7 +35,7 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        
+
       - name: Run post-build tests
         run: pnpm run test:post-build
 
@@ -58,16 +58,16 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
             🚀 **Release Successful!**
-            
+
             📦 **Package:** `${{ steps.package.outputs.name }}@${{ steps.package.outputs.version }}`
             🔖 **Tag:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.sha }}`
             👤 **Author:** ${{ github.actor }}
-            
+
             ✅ Tests passed
             ✅ Build completed
             ✅ Published to NPM
-            
+
             🔗 [View Release](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }})
             📄 [NPM Package](https://www.npmjs.com/package/${{ steps.package.outputs.name }})
 
@@ -78,12 +78,12 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
             ❌ **Release Failed!**
-            
+
             📦 **Package:** `${{ steps.package.outputs.name || 'Unknown' }}`
             🔖 **Tag:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.sha }}`
             👤 **Author:** ${{ github.actor }}
-            
+
             💥 Something went wrong during the release process.
-            
+
             🔗 [View Workflow Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})

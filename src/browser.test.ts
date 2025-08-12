@@ -66,10 +66,10 @@ describe('getAnonymousId', () => {
   it('should prefer cookie over localStorage when both exist', () => {
     const cookieId = 'cookieId'
     const localId = 'localId'
-    
+
     localStorage.setItem('FictionAnonId', localId)
     document.cookie = `FictionAnonId=${cookieId}; path=/`
-    
+
     const result = getAnonymousId()
     expect(result.anonymousId).toBe(cookieId)
     expect(result.isNew).toBe(false)
@@ -88,7 +88,7 @@ describe('getAnonymousId', () => {
   it('should set cookies with custom expiration days', () => {
     const config = { cookieExpireDays: 30 }
     const result = getAnonymousId(config)
-    
+
     expect(result.isNew).toBe(true)
     // Verify cookie was set (we can't easily test expiration in jsdom)
     const cookies = document.cookie
@@ -97,11 +97,11 @@ describe('getAnonymousId', () => {
 
   it('should store in both cookie and localStorage when new', () => {
     const result = getAnonymousId()
-    
+
     expect(result.isNew).toBe(true)
     expect(localStorage.getItem('FictionAnonId')).toBe(result.anonymousId)
     expect(sessionStorage.getItem('FictionFirstSession')).toBe('yes')
-    
+
     const cookies = document.cookie
     expect(cookies).toContain(`FictionAnonId=${result.anonymousId}`)
   })

@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
@@ -38,7 +38,7 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        
+
       - name: Run post-build tests
         run: pnpm run test:post-build
 
@@ -49,14 +49,14 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
             ✅ **CI Build Successful**
-            
+
             🌿 **Branch:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.event.head_commit.message }}`
             👤 **Author:** ${{ github.actor }}
             🧪 **Node.js:** LTS
-            
+
             All tests passed and build completed successfully!
-            
+
             🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
       - name: Notify Discord - CI Failure
@@ -66,12 +66,12 @@ jobs:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: |
             ❌ **CI Build Failed**
-            
+
             🌿 **Branch:** `${{ github.ref_name }}`
             📋 **Commit:** `${{ github.event.head_commit.message }}`
             👤 **Author:** ${{ github.actor }}
             🧪 **Node.js:** LTS
-            
+
             💥 Build or tests failed on main branch!
-            
+
             🔗 [View Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})

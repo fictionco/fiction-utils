@@ -6,7 +6,7 @@ export function toCamel(str?: string, options = { allowPeriods: false }): string
   const pattern = options.allowPeriods ? /[_\-\s]+(.)/g : /[_\-\s.]+(.)/g
   return snakeCased
     .replace(pattern, (_, c) => (c ? c.toUpperCase() : ''))
-    .replace(/^./, c => c.toLowerCase())
+    .replace(/^./, (c) => c.toLowerCase())
 }
 
 /**
@@ -15,7 +15,7 @@ export function toCamel(str?: string, options = { allowPeriods: false }): string
 export function toPascal(text?: string): string {
   if (!text)
     return ''
-  
+
   if (/^[^a-z0-9]+$/i.test(text))
     return ''
 
@@ -69,8 +69,7 @@ export function toSlug(text?: string | undefined, options?: { maintainCase?: boo
 
   if (replaceNumbers) {
     text = text.replace(/\d+/g, '').replace(/[^\w\s-]+/g, '')
-  }
-  else {
+  } else {
     text = text.replace(/[^\w\s-]+/g, '')
   }
 
@@ -87,12 +86,12 @@ export function toLabel(str?: string | number): string {
 
   str = String(str)
 
-  let label = str
+  const label = str
     .replace(/([a-z])([A-Z])/g, '$1 $2')
     .replace(/_/g, ' ')
     .replace(/-/g, ' ')
     .replace(/\//g, ' ')
-    .replace(/\b\w/g, l => l.toUpperCase())
+    .replace(/\b\w/g, (l) => l.toUpperCase())
     .trim()
 
   return label
@@ -121,15 +120,14 @@ export function convertKeyCase<T>(obj: T, options: { mode: 'snake' | 'camel' }):
       newObj[newKey] = convertKeyCase(originalObj[key], options)
     })
     return newObj as T
-  }
-  else if (Array.isArray(obj)) {
+  } else if (Array.isArray(obj)) {
     const originalArray = obj as unknown[]
-    return originalArray.map(item => convertKeyCase(item, options)) as T
+    return originalArray.map((item) => convertKeyCase(item, options)) as T
   }
 
   return obj
 }
 
-function isPlainObject(obj: any): obj is Record<string, unknown> {
+function isPlainObject(obj: unknown): obj is Record<string, unknown> {
   return obj !== null && typeof obj === 'object' && obj.constructor === Object
 }

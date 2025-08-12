@@ -61,7 +61,7 @@ describe('simpleHandlebarsParser', () => {
   it('handles context with prototype properties', () => {
     const context = Object.create({ inherited: 'should not be used' })
     context.name = 'Direct Property'
-    
+
     const template = 'Name: {{name}}, Inherited: {{inherited}}'
     const result = simpleHandlebarsParser(template, context)
     expect(result).toBe('Name: Direct Property, Inherited: {{inherited}}')

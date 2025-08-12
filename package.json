@@ -1,20 +1,40 @@
 {
   "name": "@fiction/utils",
+  "type": "module",
   "version": "0.0.1",
   "description": "A collection of well-tested TypeScript utility functions",
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/fiction-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/fiction-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/fiction-utils/issues"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "utils",
+    "helpers",
+    "functions"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
@@ -28,23 +48,11 @@
     "prepublishOnly": "pnpm run build && pnpm run test && pnpm run test:post-build && pnpm run lint && pnpm run typecheck",
     "release": "bumpp && pnpm publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yourusername/fiction-utils.git"
+  "dependencies": {
+    "@types/spark-md5": "^3.0.5",
+    "fast-safe-stringify": "^2.1.1",
+    "spark-md5": "^3.0.2"
   },
-  "keywords": [
-    "typescript",
-    "utilities",
-    "utils",
-    "helpers",
-    "functions"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yourusername/fiction-utils/issues"
-  },
-  "homepage": "https://github.com/yourusername/fiction-utils#readme",
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
     "@types/node": "^22.5.0",
@@ -61,13 +69,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
-    "@types/spark-md5": "^3.0.5",
-    "fast-safe-stringify": "^2.1.1",
-    "spark-md5": "^3.0.2"
   }
 }

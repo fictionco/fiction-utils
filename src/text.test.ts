@@ -42,7 +42,7 @@ describe('countWords', () => {
 
   it('handles punctuation correctly', () => {
     expect(countWords('Hello, world! How are you?')).toBe(5)
-    expect(countWords("It's a beautiful day, isn't it?")).toBe(6)
+    expect(countWords('It\'s a beautiful day, isn\'t it?')).toBe(6)
   })
 })
 
@@ -83,7 +83,7 @@ describe('getObjectWordCount', () => {
     expect(getObjectWordCount({})).toBe(0)
     expect(getObjectWordCount({ text: '' })).toBe(0)
     expect(getObjectWordCount({ text: '   ' })).toBe(0)
-    expect(getObjectWordCount(null as any)).toBe(0)
+    expect(getObjectWordCount(null as unknown as Record<string, unknown>)).toBe(0)
   })
 
   describe('taxonomy handling', () => {
