@@ -206,7 +206,7 @@ export function findValueByKey(obj: Record<string, unknown> | unknown[] | undefi
       }
     }
   }
-  
+
   return undefined
 }
 

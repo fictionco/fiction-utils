@@ -242,6 +242,75 @@ getDotpathArrayIndices('items.0.title') // [0]
 getDotpathArrayIndices('data.users.2.profile.1') // [2, 1]
 ```
 
+### Object Processing
+
+```typescript
+import { ObjectProcessor } from '@fiction/utils'
+
+// Create a processor for transforming objects
+const processor = new ObjectProcessor()
+
+// Add processors for specific conditions
+processor.addProcessor({
+  condition: ({ value }) => value instanceof Date,
+  action: (date: Date) => date.toISOString()
+})
+
+processor.addProcessor({
+  condition: ({ key }) => key === 'password',
+  action: () => '[REDACTED]'
+})
+
+// Process objects recursively
+const userData = {
+  name: 'John',
+  password: 'secret123',
+  created: new Date(),
+  profile: {
+    lastLogin: new Date(),
+    settings: { password: 'another-secret' }
+  }
+}
+
+const processed = await processor.parseObject(userData)
+// Dates converted to ISO strings, passwords redacted
+```
+
+### Shortcode Processing
+
+```typescript
+import { Shortcodes } from '@fiction/utils'
+
+// Create shortcode processor
+const processor = new Shortcodes()
+
+// Add custom shortcodes
+processor.addShortcode({
+  shortcode: 'user',
+  handler: ({ attributes }) => `Hello ${attributes?.name || 'Anonymous'}!`
+})
+
+processor.addShortcode({
+  shortcode: 'upper',
+  handler: ({ content }) => content?.toUpperCase() || ''
+})
+
+// Process strings with shortcodes
+await processor.parseString('[@user name="John"] [@upper]welcome[/@upper]')
+// Result: "Hello John! WELCOME"
+
+// Process objects with shortcodes in strings
+await processor.parseObject({
+  title: '[@upper]my title[/@upper]',
+  greeting: '[@user name="Jane"]',
+  metadata: { author: '[@user name="Admin"]' }
+})
+// All shortcodes in string values are processed
+
+// Built-in shortcodes: [@date], [@time], [@timestamp], [@cwd]
+await processor.parseString('Report generated on [@date] at [@time]')
+```
+
 ## Development
 
 ```bash
