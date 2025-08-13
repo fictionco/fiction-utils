@@ -5,13 +5,13 @@
   "description": "A collection of well-tested TypeScript utility functions",
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/yourusername/fiction-utils#readme",
+  "homepage": "https://github.com/fictionco/fiction-utils#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/fiction-utils.git"
+    "url": "git+https://github.com/fictionco/fiction-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/fiction-utils/issues"
+    "url": "https://github.com/fictionco/fiction-utils/issues"
   },
   "keywords": [
     "typescript",
