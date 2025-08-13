@@ -58,6 +58,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Pull latest changes to avoid conflicts
+          git pull origin main --rebase
+
           # Bump version
           pnpm version ${{ inputs.version }} --no-git-tag-version
 
