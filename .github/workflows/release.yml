@@ -71,10 +71,9 @@ jobs:
           git push origin main --tags
 
           # Publish to NPM
-          pnpm publish --no-git-checks
+          pnpm publish --no-git-checks --no-provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
 
       - name: Get package info
         id: package
