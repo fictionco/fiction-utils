@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { PopupUtility, popupUtil } from './popup'
+import { popupUtil, PopupUtility } from './popup'
 
 // Mock DOM environment for Node.js tests
 function mockDOMEnvironment() {
@@ -42,11 +42,11 @@ function mockDOMEnvironment() {
 function mockSSREnvironment() {
   // @ts-expect-error - Testing SSR environment
   delete globalThis.document
-  // @ts-expect-error - Testing SSR environment  
+  // @ts-expect-error - Testing SSR environment
   delete globalThis.window
 }
 
-describe('PopupUtility', () => {
+describe('popupUtility', () => {
   let popupUtility: PopupUtility
   let mockDOM: ReturnType<typeof mockDOMEnvironment>
 
@@ -61,7 +61,7 @@ describe('PopupUtility', () => {
     vi.useRealTimers()
   })
 
-  describe('SSR compatibility', () => {
+  describe('ssr compatibility', () => {
     beforeEach(() => {
       mockSSREnvironment()
       popupUtility = new PopupUtility()
@@ -96,7 +96,7 @@ describe('PopupUtility', () => {
       })
 
       it('should accept custom selector', () => {
-        const customUtility = new PopupUtility('#main-content')
+        const _customUtility = new PopupUtility('#main-content')
         expect(mockDOM.mockDocument.querySelector).toHaveBeenCalledWith('#main-content')
       })
 
@@ -111,7 +111,7 @@ describe('PopupUtility', () => {
         // Set some initial styles
         mockDOM.mockBody.style.position = 'static'
         mockDOM.mockBody.style.overflow = 'auto'
-        
+
         popupUtility.activate()
 
         expect(popupUtility.isActivated).toBe(true)
@@ -151,15 +151,15 @@ describe('PopupUtility', () => {
 
       it('should clear existing timeout when activating', () => {
         const clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout')
-        
+
         popupUtility.activate()
         popupUtility.deactivate()
-        
+
         // Should set a timeout
         expect(vi.getTimerCount()).toBeGreaterThan(0)
-        
+
         popupUtility.activate()
-        
+
         // Should clear the previous timeout
         expect(clearTimeoutSpy).toHaveBeenCalled()
       })
@@ -167,7 +167,7 @@ describe('PopupUtility', () => {
       it('should handle missing content element gracefully', () => {
         mockDOM.mockDocument.querySelector.mockReturnValue(null)
         const utilityWithoutElement = new PopupUtility()
-        
+
         expect(() => utilityWithoutElement.activate()).not.toThrow()
         expect(utilityWithoutElement.isActivated).toBe(true)
       })
@@ -216,7 +216,7 @@ describe('PopupUtility', () => {
       it('should not deactivate if not activated', () => {
         const inactiveUtility = new PopupUtility()
         const scrollToSpy = vi.spyOn(mockDOM.mockWindow, 'scrollTo')
-        
+
         inactiveUtility.deactivate()
 
         expect(scrollToSpy).not.toHaveBeenCalled()
@@ -227,7 +227,7 @@ describe('PopupUtility', () => {
         mockDOM.mockDocument.querySelector.mockReturnValue(null)
         const utilityWithoutElement = new PopupUtility()
         utilityWithoutElement.activate()
-        
+
         expect(() => utilityWithoutElement.deactivate()).not.toThrow()
         expect(utilityWithoutElement.isActivated).toBe(false)
       })

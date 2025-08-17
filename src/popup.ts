@@ -1,6 +1,6 @@
 /**
  * PopupUtility class for managing background fade and scroll lock effects when popups/modals are active
- * 
+ *
  * Features:
  * - Locks scroll at current position
  * - Scales down background content with smooth animation
@@ -35,8 +35,9 @@ export class PopupUtility {
    * Activates popup mode: locks scroll and scales down background content
    */
   activate() {
-    if (typeof document === 'undefined') return
-    
+    if (typeof document === 'undefined')
+      return
+
     if (this.clearTimeout) {
       clearTimeout(this.clearTimeout)
     }
@@ -76,8 +77,9 @@ export class PopupUtility {
    * Deactivates popup mode: restores scroll and removes background scaling
    */
   deactivate() {
-    if (typeof document === 'undefined') return
-    
+    if (typeof document === 'undefined')
+      return
+
     if (!this.isActivated)
       return
 
@@ -111,14 +113,14 @@ export class PopupUtility {
 
 /**
  * Default popup utility instance
- * 
+ *
  * Usage:
  * ```typescript
  * import { popupUtil } from '@fiction/utils'
- * 
+ *
  * // When showing a modal
  * popupUtil.activate()
- * 
+ *
  * // When hiding a modal
  * popupUtil.deactivate()
  * ```
