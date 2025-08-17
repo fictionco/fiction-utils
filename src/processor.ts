@@ -11,7 +11,7 @@ export interface ProcessorArgs {
   /** The key/property name being processed */
   key: string
   /** The value being processed */
-  value: any
+  value: unknown
 }
 
 /**
@@ -44,9 +44,9 @@ export interface Processor<T = unknown> {
  * ```
  */
 export class ObjectProcessor {
-  private processors: Processor<any>[] = []
+  private processors: Processor<unknown>[] = []
 
-  constructor(processors?: Processor<any>[]) {
+  constructor(processors?: Processor<unknown>[]) {
     if (processors) {
       this.processors = processors
     }
@@ -56,7 +56,7 @@ export class ObjectProcessor {
    * Add a processor to the processing pipeline
    * @param processor - The processor to add
    */
-  public addProcessor(processor: Processor<any>): void {
+  public addProcessor(processor: Processor<unknown>): void {
     this.processors.push(processor)
   }
 

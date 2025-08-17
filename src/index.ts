@@ -1,4 +1,5 @@
 export * from './async'
+export * from './autosave'
 export * from './browser'
 export * from './casing'
 export * from './hash'
