@@ -312,6 +312,52 @@ await processor.parseObject({
 await processor.parseString("Report generated on [@date] at [@time]");
 ```
 
+### UI Reset Management
+
+```typescript
+import { uiReset } from "@fiction/utils";
+
+// Register reset callbacks for modals, dropdowns, etc.
+const cleanup = uiReset.onReset(() => {
+  closeModal();
+  hideDropdown();
+  clearTooltips();
+});
+
+// Cleanup when component unmounts (Vue example)
+onUnmounted(cleanup);
+
+// Manual reset trigger
+uiReset.reset();
+
+// Framework examples:
+
+// Vue 3
+import { onUnmounted } from 'vue';
+const cleanup = uiReset.onReset(() => setShowModal(false));
+onUnmounted(cleanup);
+
+// React
+import { useEffect } from 'react';
+useEffect(() => {
+  const cleanup = uiReset.onReset(() => setShowModal(false));
+  return cleanup; // Cleanup on unmount
+}, []);
+
+// Astro/Vanilla JS
+const cleanup = uiReset.onReset(() => {
+  document.getElementById('modal').style.display = 'none';
+});
+// Call cleanup() when needed
+```
+
+**Features:**
+- ✅ **Framework agnostic** - Works with Vue, React, Astro, vanilla JS
+- ✅ **SSR safe** - No-op functions when `window` is undefined  
+- ✅ **Standard browser APIs** - Uses `history` interception + `popstate` for route changes
+- ✅ **Auto-triggers** - Escape key, window clicks, route navigation
+- ✅ **Error handling** - Catches callback errors without breaking others
+
 ## Development
 
 ```bash

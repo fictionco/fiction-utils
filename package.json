@@ -18,7 +18,15 @@
     "utilities",
     "utils",
     "helpers",
-    "functions"
+    "functions",
+    "ui",
+    "reset",
+    "modal",
+    "dropdown",
+    "click-outside",
+    "escape-key",
+    "framework-agnostic",
+    "ssr"
   ],
   "exports": {
     ".": {
