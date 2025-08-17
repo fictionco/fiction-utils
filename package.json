@@ -53,6 +53,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
+    "ci": "git pull && npm test -- --run && npm run lint && npm run typecheck && git push",
     "prepublishOnly": "pnpm run build && pnpm run test && pnpm run test:post-build && pnpm run lint && pnpm run typecheck"
   },
   "dependencies": {
