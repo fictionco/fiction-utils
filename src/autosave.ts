@@ -21,7 +21,7 @@ export class AutosaveUtility<T = unknown> {
 
   public async forceSync(): Promise<T | undefined | void> {
     this.clear()
-    return await this.save()
+    return this.save()
   }
 
   public clear(): void {
@@ -31,7 +31,7 @@ export class AutosaveUtility<T = unknown> {
 
   private debouncedSave(): void {
     this.clearTimeout()
-    this.saveTimeout = setTimeout(() => this.save(), this.config.debounceMs ?? 2000)
+    this.saveTimeout = setTimeout(async () => this.save(), this.config.debounceMs ?? 2000)
   }
 
   private async save(): Promise<T | undefined | void> {
@@ -44,8 +44,7 @@ export class AutosaveUtility<T = unknown> {
       this.isDirty.value = false
 
       return r
-    }
-    catch (error) {
+    } catch (error) {
       if (this.config.onError) {
         this.config.onError(error)
       }
