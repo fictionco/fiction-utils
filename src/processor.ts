@@ -46,7 +46,7 @@ export interface Processor<T = unknown> {
 export class ObjectProcessor {
   private processors: Processor<unknown>[] = []
 
-  constructor(processors?: Processor<unknown>[]) {
+  constructor(processors?: Processor<any>[]) {
     if (processors) {
       this.processors = processors
     }
@@ -56,8 +56,8 @@ export class ObjectProcessor {
    * Add a processor to the processing pipeline
    * @param processor - The processor to add
    */
-  public addProcessor(processor: Processor<unknown>): void {
-    this.processors.push(processor)
+  public addProcessor<T = unknown>(processor: Processor<T>): void {
+    this.processors.push(processor as Processor<unknown>)
   }
 
   /**
