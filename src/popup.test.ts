@@ -1,3 +1,4 @@
+/* eslint-disable ts/no-explicit-any */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { popupUtil, PopupUtility } from './popup'
 
@@ -89,11 +90,12 @@ describe('popupUtility', () => {
 
     describe('constructor', () => {
       it('should initialize with default selector', () => {
-        expect(mockDOM.mockDocument.querySelector).toHaveBeenCalledWith('body > *:first-child')
+        expect(mockDOM.mockDocument.querySelector).toHaveBeenCalledWith('.body-content')
         expect(popupUtility.isActivated).toBe(false)
       })
 
       it('should accept custom selector', () => {
+        // eslint-disable-next-line no-new
         new PopupUtility('#main-content')
         expect(mockDOM.mockDocument.querySelector).toHaveBeenCalledWith('#main-content')
       })
