@@ -57,6 +57,11 @@ class UIResetManager {
   private callbacks = new Set<() => void>()
   private initialized = false
 
+  // Test helper methods - only for testing
+  public get _testCallbacks() { return this.callbacks }
+  public get _testInitialized() { return this.initialized }
+  public set _testInitialized(value: boolean) { this.initialized = value }
+
   /**
    * Register a callback to be called when UI should reset
    * @param callback Function to call on reset

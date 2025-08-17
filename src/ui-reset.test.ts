@@ -45,8 +45,8 @@ function mockWindow() {
 describe('uIResetManager', () => {
   beforeEach(() => {
     // Reset the singleton state
-    uiReset.callbacks.clear()
-    uiReset.initialized = false
+    uiReset._testCallbacks.clear()
+    uiReset._testInitialized = false
     vi.clearAllMocks()
   })
 
@@ -178,9 +178,6 @@ describe('uIResetManager', () => {
       const callback = vi.fn()
       uiReset.onReset(callback)
 
-      // Store original function before it gets replaced
-      const _originalPushState = history.pushState.bind(history)
-
       // Trigger pushState
       history.pushState({}, '', '/new-route')
 
@@ -188,15 +185,11 @@ describe('uIResetManager', () => {
       await new Promise((resolve) => setTimeout(resolve, 10))
 
       expect(callback).toHaveBeenCalledTimes(1)
-      // Just verify the method was called, don't check the spy
     })
 
     it('should intercept history.replaceState and trigger reset', async () => {
       const callback = vi.fn()
       uiReset.onReset(callback)
-
-      // Store original function before it gets replaced
-      const _originalReplaceState = history.replaceState.bind(history)
 
       // Trigger replaceState
       history.replaceState({}, '', '/replaced-route')
@@ -205,7 +198,6 @@ describe('uIResetManager', () => {
       await new Promise((resolve) => setTimeout(resolve, 10))
 
       expect(callback).toHaveBeenCalledTimes(1)
-      // Just verify the method was called, don't check the spy
     })
   })
 
