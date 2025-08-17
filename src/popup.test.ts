@@ -40,10 +40,8 @@ function mockDOMEnvironment() {
 }
 
 function mockSSREnvironment() {
-  // @ts-expect-error - Testing SSR environment
-  delete globalThis.document
-  // @ts-expect-error - Testing SSR environment
-  delete globalThis.window
+  delete (globalThis as any).document
+  delete (globalThis as any).window
 }
 
 describe('popupUtility', () => {
@@ -96,7 +94,7 @@ describe('popupUtility', () => {
       })
 
       it('should accept custom selector', () => {
-        const _customUtility = new PopupUtility('#main-content')
+        new PopupUtility('#main-content')
         expect(mockDOM.mockDocument.querySelector).toHaveBeenCalledWith('#main-content')
       })
 
