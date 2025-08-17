@@ -1,63 +1,106 @@
-import type { FictionEnv, ResetUiScope, ResetUiTrigger } from '../plugin-env/index.js'
 import type { FictionRouter } from '../plugin-router/index.js'
-import { emitEvent, onEvent } from './event.js'
 import { vue } from './libraries.js'
 
-interface ResetUiDetail {
-  scope: ResetUiScope
-  trigger: ResetUiTrigger
-  cause: string
-}
 /**
- * Emits an event that will reset ui on all dynamic UI components
+ * UI Reset Manager - Simple singleton for managing UI component resets
+ * 
+ * Automatically resets UI components on:
+ * - Escape key press
+ * - Window clicks (click outside)
+ * - Route changes
+ * 
+ * @example
+ * ```typescript
+ * // In a modal component
+ * const cleanup = uiReset.onReset(() => {
+ *   closeModal()
+ * })
+ * 
+ * // Cleanup when component unmounts
+ * onUnmounted(cleanup)
+ * ```
  */
-export function resetUi(args: ResetUiDetail): void {
-  emitEvent('resetUi', args)
-}
-/**
- * Make a single listener to prevent large numbers of listeners across many looped components
- * Large amount of listeners triggers memory leak warnings, etc.
- */
-let __listener = false
-const __callbacks: { (args: ResetUiDetail): void }[] = []
-export function onResetUi(cb: (args: ResetUiDetail) => void, _args: { location?: string } = {}): void {
-  if (typeof window === 'undefined')
-    return
+class UIResetManager {
+  private callbacks = new Set<() => void>()
+  private initialized = false
+  private router?: FictionRouter
 
-  __callbacks.push(cb)
+  /**
+   * Register a callback to be called when UI should reset
+   * @param callback Function to call on reset
+   * @returns Cleanup function to remove the callback
+   */
+  onReset(callback: () => void): () => void {
+    if (typeof window === 'undefined') {
+      // Return no-op cleanup for SSR
+      return () => {}
+    }
 
-  if (!__listener) {
-    __listener = true
-    onEvent('resetUi', (args: ResetUiDetail) => {
-      __callbacks.forEach(cb => cb(args || {}))
+    this.callbacks.add(callback)
+    this.init()
+    
+    // Return cleanup function
+    return () => this.callbacks.delete(callback)
+  }
+
+  /**
+   * Manually trigger a reset of all registered callbacks
+   */
+  reset(): void {
+    this.callbacks.forEach(cb => cb())
+  }
+
+  /**
+   * Initialize with router for route change detection
+   * @param router FictionRouter instance
+   */
+  setRouter(router: FictionRouter): void {
+    this.router = router
+    this.init()
+  }
+
+  private init(): void {
+    if (this.initialized || typeof window === 'undefined') return
+    this.initialized = true
+
+    // Reset on escape key
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Escape') this.reset()
     })
+    
+    // Reset on window clicks (click outside)
+    window.addEventListener('click', () => this.reset())
+    
+    // Watch for route changes if router is available
+    if (this.router) {
+      vue.watch(
+        () => this.router!.current.value.path,
+        (newPath, oldPath) => {
+          if (newPath !== oldPath) this.reset()
+        },
+      )
+    }
   }
 }
 
-export async function initializeResetUi(args: { fictionRouter: FictionRouter, fictionEnv: FictionEnv }): Promise<void> {
-  const { fictionRouter, fictionEnv } = args
+/**
+ * Global UI reset manager instance
+ * Use this singleton to register reset callbacks across your application
+ */
+export const uiReset = new UIResetManager()
 
-  const res = (_: ResetUiDetail) => {
-    resetUi(_)
-    fictionEnv.events.emit('resetUi', _)
-  }
+// Legacy compatibility exports
+export function resetUi(): void {
+  uiReset.reset()
+}
 
-  window.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key === 'Escape')
-      res({ scope: 'all', cause: 'escape', trigger: 'escape' })
-  })
+export function onResetUi(cb: () => void): () => void {
+  return uiReset.onReset(cb)
+}
 
-  window.addEventListener('click', () => {
-    res({ scope: 'all', cause: 'windowClick', trigger: 'windowClick' })
-  })
-
-  vue.watch(
-    () => fictionRouter.current.value.path,
-    (r, old) => {
-      if (r !== old)
-        res({ scope: 'all', cause: 'routeChange', trigger: 'routeChange' })
-    },
-  )
+export async function initializeResetUi(args: { fictionRouter: FictionRouter }): Promise<void> {
+  const { fictionRouter } = args
+  uiReset.setRouter(fictionRouter)
 }
 
 interface WindowSize {
