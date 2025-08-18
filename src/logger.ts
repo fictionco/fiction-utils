@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-import process from 'node:process'
-
 type LogLevel = 'error' | 'warn' | 'info' | 'debug' | 'trace'
 
 type LogData = Record<string, any> | unknown
@@ -27,7 +25,13 @@ interface LogSettings {
   timestamps?: boolean
 }
 
-const isNode = typeof process !== 'undefined' && process.versions?.node
+const isNode = (() => {
+  try {
+    return typeof process !== 'undefined' && process.versions?.node
+  } catch {
+    return false
+  }
+})()
 const isBrowser = typeof window !== 'undefined'
 
 const logLevels: Record<LogLevel, { priority: number, color: string, nodeColor?: string }> = {
@@ -59,7 +63,11 @@ export class Logger {
 
   private isProduction(): boolean {
     if (isNode) {
-      return process.env.NODE_ENV === 'production'
+      try {
+        return process.env.NODE_ENV === 'production'
+      } catch {
+        return false
+      }
     }
     if (isBrowser && window.location) {
       const hostname = window.location.hostname
