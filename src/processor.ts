@@ -46,7 +46,7 @@ export interface Processor<T = unknown> {
 export class ObjectProcessor {
   private processors: Processor<unknown>[] = []
 
-  constructor(processors?: Processor<any>[]) {
+  constructor(processors?: Processor<unknown>[]) {
     if (processors) {
       this.processors = processors
     }
@@ -66,7 +66,7 @@ export class ObjectProcessor {
    * @param parentKey - Internal parameter for tracking the current key path
    * @returns The processed object
    */
-  public async parseObject(obj: any, parentKey: string = ''): Promise<any> {
+  public async parseObject(obj: unknown, parentKey: string = ''): Promise<unknown> {
     if (Array.isArray(obj)) {
       return Promise.all(obj.map(async (item) => this.parseValue(item, parentKey)))
     } else if (isPlainObject(obj)) {
@@ -75,19 +75,19 @@ export class ObjectProcessor {
           try {
             const processedValue = await this.parseValue(value, key)
             return [key, processedValue] // Always return key-value pair
-          } catch (error) {
+          } catch {
             return null // Return null if an error occurs
           }
         }),
       )
       // Filter out null entries and convert back to object
-      return Object.fromEntries(processedEntries.filter((entry) => entry !== null) as [string, any][])
+      return Object.fromEntries(processedEntries.filter((entry) => entry !== null) as [string, unknown][])
     } else {
       return this.runProcessors({ key: parentKey, value: obj })
     }
   }
 
-  private async parseValue(value: any, key: string): Promise<any> {
+  private async parseValue(value: unknown, key: string): Promise<unknown> {
     const processedValue = await this.runProcessors({ key, value })
     if (processedValue !== value) {
       return processedValue
@@ -100,15 +100,11 @@ export class ObjectProcessor {
     return value
   }
 
-  private async runProcessors({ key, value }: ProcessorArgs): Promise<any> {
+  private async runProcessors({ key, value }: ProcessorArgs): Promise<unknown> {
     for (const processor of this.processors) {
       if (await processor.condition({ key, value })) {
-        try {
-          const result = await processor.action(value)
-          return result
-        } catch (error) {
-          throw error // Re-throw the error to be caught by parseValue
-        }
+        const result = await processor.action(value)
+        return result
       }
     }
     return value

@@ -274,7 +274,7 @@ export class Shortcodes<TConfig extends ShortcodeConfig = ShortcodeConfig> {
    * @param obj - The object to process
    * @returns The processed object
    */
-  public async parseObject(obj: any): Promise<any> {
+  public async parseObject(obj: unknown): Promise<unknown> {
     if (Array.isArray(obj)) {
       return Promise.all(obj.map(async (item) => this.parseObject(item)))
     }
@@ -289,7 +289,7 @@ export class Shortcodes<TConfig extends ShortcodeConfig = ShortcodeConfig> {
           }
         }),
       )
-      return Object.fromEntries(entries.filter(Boolean) as [string, any][])
+      return Object.fromEntries(entries.filter(Boolean) as [string, unknown][])
     }
     if (typeof obj === 'string' && this.containsShortcode(obj)) {
       return (await this.parseString(obj)).text
@@ -302,7 +302,7 @@ export class Shortcodes<TConfig extends ShortcodeConfig = ShortcodeConfig> {
    * @param obj - The object to process
    * @returns The processed object
    */
-  public parseObjectSync(obj: any): any {
+  public parseObjectSync(obj: unknown): unknown {
     if (this.hasAsyncShortcodes) {
       throw new Error('Synchronous parsing not available with async shortcodes')
     }

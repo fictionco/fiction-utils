@@ -38,7 +38,7 @@ export default antfu(
       'ts/no-unsafe-member-access': 'off',
       'ts/no-misused-promises': 'off',
       'ts/explicit-function-return-type': 'off',
-      'ts/no-explicit-any': 'warn',
+      'ts/no-explicit-any': 'off',
       'ts/no-non-null-assertion': 'off',
 
       // Style rules

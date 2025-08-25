@@ -3,7 +3,7 @@ import process from 'node:process'
 
 type LogLevel = 'error' | 'warn' | 'info' | 'debug' | 'trace'
 
-type LogData = Record<string, any> | unknown
+type LogData = Record<string, unknown> | unknown
 
 export type LogHelper = Record<
   LogLevel,
@@ -108,7 +108,7 @@ export class Logger {
     })
   }
 
-  private formatData(data: any, maxDepth: number = 3, currentDepth: number = 0): any {
+  private formatData(data: unknown, maxDepth: number = 3, currentDepth: number = 0): unknown {
     if (currentDepth >= maxDepth) {
       return '[Max Depth Reached]'
     }
@@ -136,7 +136,7 @@ export class Logger {
       return data.map((item) => this.formatData(item, maxDepth, currentDepth + 1))
     }
 
-    const formatted: Record<string, any> = {}
+    const formatted: Record<string, unknown> = {}
     const entries = Object.entries(data).slice(0, 50) // Limit properties
 
     for (const [key, value] of entries) {

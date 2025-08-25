@@ -1,4 +1,3 @@
-/* eslint-disable ts/no-explicit-any */
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { popupUtil, PopupUtility } from './popup'
 

@@ -78,7 +78,7 @@ describe('logger', () => {
       dbLogger.info('Connection established')
       expect(console.info).toHaveBeenCalled()
 
-      const logCall = (console.info as any).mock.calls[0][0]
+      const logCall = (console.info as unknown as { mock: { calls: string[][] } }).mock.calls[0][0]
       expect(logCall).toContain('[database]')
     })
 
@@ -109,7 +109,7 @@ describe('logger', () => {
     })
 
     it('handles circular references', () => {
-      const circular: any = { name: 'test' }
+      const circular: { name: string, self?: unknown } = { name: 'test' }
       circular.self = circular
 
       expect(() => {
@@ -127,7 +127,7 @@ describe('logger', () => {
     })
 
     it('handles large objects', () => {
-      const largeObject: any = {}
+      const largeObject: Record<string, string> = {}
       for (let i = 0; i < 100; i++) {
         largeObject[`prop${i}`] = `value${i}`
       }
