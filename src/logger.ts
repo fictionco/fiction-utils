@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import process from 'node:process'
 
 type LogLevel = 'error' | 'warn' | 'info' | 'debug' | 'trace'
 
@@ -27,8 +26,10 @@ interface LogSettings {
   timestamps?: boolean
 }
 
-const isNode = typeof process !== 'undefined' && process.versions?.node
+// Safe environment detection that works in both browser and Node.js builds
 const isBrowser = typeof window !== 'undefined'
+// eslint-disable-next-line node/prefer-global/process
+const isNode = !isBrowser && typeof globalThis !== 'undefined' && typeof globalThis.process !== 'undefined'
 
 const logLevels: Record<LogLevel, { priority: number, color: string, nodeColor?: string }> = {
   error: { priority: 50, color: '#FF0000', nodeColor: '\x1B[31m' },
@@ -59,7 +60,10 @@ export class Logger {
 
   private isProduction(): boolean {
     if (isNode) {
-      return process.env.NODE_ENV === 'production'
+      // Use globalThis to safely access env vars without importing process
+      // eslint-disable-next-line node/prefer-global/process
+      const env = (globalThis as any).process?.env?.NODE_ENV
+      return env === 'production'
     }
     if (isBrowser && window.location) {
       const hostname = window.location.hostname
