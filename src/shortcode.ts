@@ -188,7 +188,6 @@ export class Shortcodes<TConfig extends ShortcodeConfig = ShortcodeConfig> {
 
         const handler = this.shortcodes[shortcode.trim()]
         if (!handler) {
-          console.warn(`No handler found for shortcode: ${shortcode}`, { data: match })
           result += fullMatch
           continue
         }
@@ -217,7 +216,6 @@ export class Shortcodes<TConfig extends ShortcodeConfig = ShortcodeConfig> {
 
         const handler = this.shortcodes[shortcode.trim()]
         if (!handler) {
-          console.warn(`No handler found for shortcode: ${shortcode}`, { data: match })
           result += fullMatch
           continue
         }

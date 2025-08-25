@@ -76,7 +76,6 @@ export class ObjectProcessor {
             const processedValue = await this.parseValue(value, key)
             return [key, processedValue] // Always return key-value pair
           } catch (error) {
-            console.error(`Error processing ${key}`, { error })
             return null // Return null if an error occurs
           }
         }),
@@ -108,7 +107,6 @@ export class ObjectProcessor {
           const result = await processor.action(value)
           return result
         } catch (error) {
-          console.error(`Error in processor for key: ${key}`, { error })
           throw error // Re-throw the error to be caught by parseValue
         }
       }
