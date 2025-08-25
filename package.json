@@ -2,7 +2,7 @@
   "name": "@fiction/utils",
   "type": "module",
   "version": "0.0.9",
-  "description": "A collection of well-tested TypeScript utility functions",
+  "description": "Well-tested utility functions",
   "author": "",
   "license": "MIT",
   "homepage": "https://github.com/fictionco/fiction-utils#readme",
