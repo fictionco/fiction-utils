@@ -120,7 +120,7 @@ describe('objectProcessor', () => {
     const processor = new ObjectProcessor()
     processor.addProcessor(mockProcessor)
     const obj = { array: ['value1', 'value2', { testKey: 'value' }] }
-    const processedObj = await processor.parseObject(obj)
+    const processedObj = await processor.parseObject(obj) as { array: unknown[] }
 
     expect(Array.isArray(processedObj.array)).toBeTruthy()
     expect(processedObj.array.length).toBe(3)
@@ -132,7 +132,7 @@ describe('objectProcessor', () => {
     processor.addProcessor(mockProcessor)
 
     const obj = { nested: { array: [{ testKey: 'value1' }, 'value2'] } }
-    const processedObj = await processor.parseObject(obj)
+    const processedObj = await processor.parseObject(obj) as { nested: { array: unknown[] } }
 
     expect(Array.isArray(processedObj.nested.array)).toBeTruthy()
     expect(processedObj.nested.array).toEqual([{ testKey: 'processed-value1' }, 'value2'])
@@ -141,7 +141,7 @@ describe('objectProcessor', () => {
   it('should handle arrays of primitive values correctly', async () => {
     const processor = new ObjectProcessor()
     const obj = { numbers: [1, 2, 3], strings: ['a', 'b', 'c'] }
-    const processedObj = await processor.parseObject(obj)
+    const processedObj = await processor.parseObject(obj) as { numbers: number[], strings: string[] }
 
     expect(Array.isArray(processedObj.numbers)).toBeTruthy()
     expect(processedObj.numbers).toEqual([1, 2, 3])

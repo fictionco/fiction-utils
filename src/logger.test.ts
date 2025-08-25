@@ -78,7 +78,7 @@ describe('logger', () => {
       dbLogger.info('Connection established')
       expect(console.info).toHaveBeenCalled()
 
-      const logCall = (console.info as unknown as { mock: { calls: string[][] } }).mock.calls[0][0]
+      const logCall = (console.info as unknown as { mock: { calls: string[][] } }).mock.calls[0]?.[0]
       expect(logCall).toContain('[database]')
     })
 

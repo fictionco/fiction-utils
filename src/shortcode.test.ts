@@ -157,7 +157,7 @@ describe('shortcodes tests', () => {
       }
     }"""`
 
-    const result = await shortcodes.parseObject({ input })
+    const result = await shortcodes.parseObject({ input }) as { input: string }
     expect(result.input).toContain('MockResult: search:futuristic secret agent technology, orientation:landscape, description:spies playing baseball')
   })
 
