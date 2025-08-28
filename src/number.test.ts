@@ -6,6 +6,7 @@ import {
   isNumeric,
   numberFormatter,
   randomBetween,
+  randomNumberBetween,
 } from './number'
 
 describe('randomBetween', () => {
@@ -37,6 +38,24 @@ describe('randomBetween', () => {
   it('should handle same min and max', () => {
     const result = randomBetween(5, 5)
     expect(result).toBe(5)
+  })
+})
+
+describe('randomNumberBetween', () => {
+  it('should generate numbers within the specified range', () => {
+    for (let i = 0; i < 50; i++) {
+      const result = randomNumberBetween(1, 10)
+      expect(result).toBeGreaterThanOrEqual(1)
+      expect(result).toBeLessThanOrEqual(10)
+    }
+  })
+
+  it('should handle decimal places correctly', () => {
+    const result = randomNumberBetween(1, 2, 3)
+    const decimalPlaces = (result.toString().split('.')[1] || '').length
+    expect(decimalPlaces).toBeLessThanOrEqual(3)
+    expect(result).toBeGreaterThanOrEqual(1)
+    expect(result).toBeLessThanOrEqual(2)
   })
 })
 

@@ -21,6 +21,14 @@ export function randomBetween(min: number, max: number, decimalPlaces = 0): numb
 }
 
 /**
+ * Generate a random number between min and max with optional decimal places
+ * Alias for randomBetween
+ */
+export function randomNumberBetween(min: number, max: number, decimalPlaces = 0): number {
+  return randomBetween(min, max, decimalPlaces)
+}
+
+/**
  * Check if a value is numeric or number-like
  */
 export function isNumeric(n: number | string | undefined | null): boolean {
