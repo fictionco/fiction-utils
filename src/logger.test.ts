@@ -79,7 +79,7 @@ describe('logger', () => {
       expect(console.info).toHaveBeenCalled()
 
       const logCall = (console.info as unknown as { mock: { calls: string[][] } }).mock.calls[0]?.[0]
-      expect(logCall).toContain('[database]')
+      expect(logCall).toContain('(database):')
     })
 
     it('creates logger with custom settings', () => {

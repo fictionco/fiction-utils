@@ -112,9 +112,9 @@ export class Logger {
     })
   }
 
-  private formatData(data: unknown, maxDepth: number = 3, currentDepth: number = 0): unknown {
+  private formatData(data: unknown, maxDepth: number = 5, currentDepth: number = 0, maxSize: number = 12000, maxProperties: number = 100): unknown {
     if (currentDepth >= maxDepth) {
-      return '[Max Depth Reached]'
+      return `[Max Depth Reached: ${maxDepth}]`
     }
 
     if (data === null || data === undefined) {
@@ -123,13 +123,14 @@ export class Logger {
 
     if (data instanceof Error) {
       return {
+        name: data.name,
         message: data.message,
         stack: data.stack?.split('\n').slice(0, 5).join('\n'),
       }
     }
 
     if (data instanceof Date) {
-      return data.toISOString()
+      return `DATE: ${data.toISOString()}`
     }
 
     if (typeof data !== 'object') {
@@ -137,22 +138,44 @@ export class Logger {
     }
 
     if (Array.isArray(data)) {
-      return data.map((item) => this.formatData(item, maxDepth, currentDepth + 1))
+      if (data.length > 20) {
+        return `Array(${data.length}) [${data.slice(0, 3).map((item) => this.formatData(item, maxDepth, currentDepth + 1, maxSize, maxProperties)).join(', ')}, ...]`
+      }
+      return data.map((item) => this.formatData(item, maxDepth, currentDepth + 1, maxSize, maxProperties))
+    }
+
+    const getType = (obj: any) => {
+      if (obj instanceof Map)
+        return 'Map'
+      if (obj instanceof Set)
+        return 'Set'
+      return obj.constructor?.name ?? 'Object'
+    }
+
+    try {
+      const stringified = JSON.stringify(data)
+      if (stringified.length > maxSize) {
+        const objType = getType(data)
+        const propCount = Object.keys(data).length
+        return `[${objType}: ${propCount} properties, Size: ${stringified.length}/${maxSize}]`
+      }
+    } catch {
+      return '[Circular Reference or Unserializable]'
     }
 
     const formatted: Record<string, unknown> = {}
-    const entries = Object.entries(data).slice(0, 50) // Limit properties
+    const entries = Object.entries(data).slice(0, maxProperties)
 
     for (const [key, value] of entries) {
       try {
-        formatted[key] = this.formatData(value, maxDepth, currentDepth + 1)
+        formatted[key] = this.formatData(value, maxDepth, currentDepth + 1, maxSize, maxProperties)
       } catch {
         formatted[key] = '[Circular or Unserializable]'
       }
     }
 
-    if (Object.keys(data).length > 50) {
-      formatted['...'] = `${Object.keys(data).length - 50} more properties`
+    if (Object.keys(data).length > maxProperties) {
+      formatted['...'] = `${Object.keys(data).length - maxProperties} more properties`
     }
 
     return formatted
@@ -167,23 +190,76 @@ export class Logger {
     const ctx = context || this.context || 'app'
     const timestamp = this.settings.timestamps ? `${this.formatTimestamp()} ` : ''
 
-    const styles = [
-      `color: ${levelConfig.color}; font-weight: bold;`,
-      `color: ${levelConfig.color}99;`,
-      'color: inherit;',
-    ]
+    const timestampStyle = `color: ${levelConfig.color}66; font-size: 11px;`
+    const levelStyle = `color: ${levelConfig.color}; font-weight: bold; background: ${levelConfig.color}11; padding: 2px 6px; border-radius: 3px;`
+    const contextStyle = `color: ${levelConfig.color}99; font-weight: 500;`
+    const messageStyle = 'color: inherit; font-weight: normal;'
 
     console[level](
-      `%c${timestamp}${level.toUpperCase()} %c[${ctx}] %c${description || ''}`,
-      ...styles,
+      `%c${timestamp}%c${level.toUpperCase()}%c(${ctx}):%c ${description || ''}`,
+      timestampStyle,
+      levelStyle,
+      contextStyle,
+      messageStyle,
     )
 
     if (data !== undefined) {
-      console.log('Data:', this.formatData(data))
+      if (data instanceof Error) {
+        console.group('Error Details:')
+        console.error('Message:', data.message)
+        if (data.stack) {
+          console.error('Stack:', data.stack)
+        }
+        console.groupEnd()
+      } else if (typeof data === 'object' && data !== null) {
+        console.group('Data:')
+        console.log(data)
+        console.groupEnd()
+      } else {
+        console.log('Data:', data)
+      }
     }
 
     if (error) {
-      console.error('Error:', error)
+      console.group('Additional Error:')
+      console.error(error)
+      console.groupEnd()
+    }
+  }
+
+  private logError(config: {
+    error: Error | unknown
+    context?: string
+    description?: string
+    color?: string
+  }): void {
+    const { error, context = 'Unknown Context', description } = config
+    const e = error as Error
+    const timestamp = this.formatTimestamp()
+    const reset = '\x1B[0m'
+    const red = '\x1B[31m'
+    const dim = '\x1B[2m'
+    const bold = '\x1B[1m'
+
+    const logTimestamp = `${dim}${timestamp} ${red}ERROR${reset}`
+    const logContext = `${red}(${context}):${reset}`.padEnd(15)
+    const logDescription = description ? `${red}${description}${reset} ` : ''
+
+    const errorMessage = `${bold}${e.message ?? 'Unknown Error'}${reset}`
+    const errorDescription = e.message ? `${dim}MESSAGE >${reset} ${errorMessage}` : ''
+
+    console.log(`${logTimestamp} ${logContext} ${logDescription}`)
+    if (errorDescription) {
+      console.log(errorDescription)
+    }
+
+    if (e.stack) {
+      const formattedStackTrace = e.stack
+        .split('\n')
+        .slice(1, 6)
+        .map((line) => `${dim}${line.trim()}${reset}`)
+        .join('\n')
+      console.log(formattedStackTrace)
     }
   }
 
@@ -196,19 +272,32 @@ export class Logger {
     const ctx = context || this.context || 'app'
     const timestamp = this.settings.timestamps ? `${this.formatTimestamp()} ` : ''
 
-    const reset = '\x1B[0m'
-    const color = this.settings.colors ? levelConfig.nodeColor : ''
-
-    const prefix = `${color}${timestamp}${level.toUpperCase().padEnd(5)} [${ctx}]${reset}`
-
-    console[level](`${prefix} ${description || ''}`)
-
-    if (data !== undefined) {
-      console.log(JSON.stringify(this.formatData(data), null, 2))
+    if (error) {
+      this.logError({ error, context: ctx, description })
+      return
     }
 
-    if (error) {
-      console.error('Error:', error)
+    const reset = '\x1B[0m'
+    const dim = '\x1B[2m'
+    const color = this.settings.colors ? levelConfig.nodeColor : ''
+
+    const logTimestamp = `${dim}${timestamp}${color}${level.toUpperCase()}${reset}`
+    const logContext = `${color}(${ctx}):${reset}`.padEnd(15)
+    const logMessage = `${logTimestamp} ${logContext} ${description || ''}`
+
+    console[level](logMessage)
+
+    if (data !== undefined) {
+      if (data instanceof Error) {
+        this.logError({ error: data, context: ctx })
+      } else {
+        const formattedData = this.formatData(data)
+        if (typeof formattedData === 'object' && formattedData !== null) {
+          console.log(JSON.stringify(formattedData, null, 2))
+        } else {
+          console.log(String(formattedData))
+        }
+      }
     }
   }
 
